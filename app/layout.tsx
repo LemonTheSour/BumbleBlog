@@ -1,7 +1,6 @@
 import { Fredoka, Raleway_Dots } from 'next/font/google'
 import './globals.css'
-import Header
- from './components/Header'
+import Header from './components/Header'
 const fredoka = Fredoka({
   weight: ['400', '700'],
   subsets: ['latin'] 
@@ -24,9 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={fredoka.className}>{children}</body>
-      <Header />
-      <main className='container'>{children}</main>
+      <body className={fredoka.className}>
+        <Header/>
+        <main>{children}</main>
+      </body>
     </html>
   )
 }
