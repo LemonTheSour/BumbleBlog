@@ -1,14 +1,10 @@
-import { Fredoka, Raleway_Dots } from 'next/font/google'
+import { Fredoka } from 'next/font/google'
 import './globals.css'
-import Header from './components/Header'
+import Navbar from './components/Navbar'
+
 const fredoka = Fredoka({
   weight: ['400', '600', '700'],
   subsets: ['latin'] 
-})
-
-const ralewaydots = Raleway_Dots({
-  weight: '400',
-  subsets: ['latin']
 })
 
 export const metadata = {
@@ -24,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={fredoka.className}>
-        <Header/>
+        <Navbar/>
         <main>{children}</main>
       </body>
     </html>

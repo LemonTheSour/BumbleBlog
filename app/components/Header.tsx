@@ -1,21 +1,17 @@
-import Link from "next/link";
-import {RxHamburgerMenu} from "react-icons/Rx";
-import Categories from "../data/categories.json"
+import { Raleway_Dots } from "next/font/google"
 
-export default function Header() {
-  return (
-    <div>
-        <div className="h-14 w-full px-4 bg-chardonnay flex flex-row items-center justify-between">
-            <Link href='/'>BumbleBlog</Link>
-            <div>SearchBar</div>
-            <Link href='/login'>login</Link>
+const ralewaydots = Raleway_Dots({
+        weight: '400',
+        subsets: ['latin']
+    })
+
+export default function Header(heading: {text: String}){
+
+    return(
+        <div className="w-full flex justify-center">
+            <div className="w-3/5 p-6 text-7xl text-center border-black border-b-2">
+                <h1 className={ralewaydots.className}>{heading.text}</h1>
+            </div>
         </div>
-        <div className="h-10 w-full px-4 bg-atomic-tangerine flex flex-row items-center space-x-4">
-            <button><RxHamburgerMenu size={28}/></button>
-            {Categories.map((categories:any) => (
-                <Link key={categories.key} href={categories.link} className="font-semibold font text-xl">{categories.category}</Link>
-            ))}
-        </div>
-    </div>
-  )
+    )
 }
