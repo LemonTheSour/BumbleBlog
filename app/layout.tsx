@@ -2,7 +2,7 @@ import { Fredoka, Raleway_Dots } from 'next/font/google'
 import './globals.css'
 import Header from './components/Header'
 const fredoka = Fredoka({
-  weight: ['400', '700'],
+  weight: ['400', '600', '700'],
   subsets: ['latin'] 
 })
 
