@@ -7,7 +7,7 @@ export default function HomePage() {
       <Header text="About The Blog" />
       <br></br>
       <Header text="Categories"/>
-      <Category title="Books"  />
+      <Category title="Books" imageSource="/../public/images/books.jpg"/>
     </div>
   )
 }
