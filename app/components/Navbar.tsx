@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {RxHamburgerMenu} from "react-icons/Rx";
 import Categories from "../data/categories.json"
+import LoginButton from "./LoginButton"
 
 export default function Navbar() {
   return (
@@ -8,7 +9,9 @@ export default function Navbar() {
         <div className="h-14 w-full px-4 bg-chardonnay flex flex-row items-center justify-between">
             <Link href='/'>BumbleBlog</Link>
             <div>SearchBar</div>
-            <Link href='/login'>login</Link>
+            <Link href='/login'>
+                <LoginButton />
+            </Link>
         </div>
         <div className="h-10 w-full px-4 bg-atomic-tangerine flex flex-row items-center space-x-4">
             <button><RxHamburgerMenu size={28}/></button>
