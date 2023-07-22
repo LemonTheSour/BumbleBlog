@@ -2,7 +2,7 @@ import Image from "next/image"
 
 interface CategoryProps {
     title: String,
-    imageSource: String
+    imageSource: string
 }
 
 export default function Category(props: CategoryProps){
