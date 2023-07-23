@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       colors:{
         'atomic-tangerine': '#FF9064',
-        'chardonnay': '#FFCC8D'
+        'chardonnay': '#FFCC8D',
+        'dark-green': '#194023'
       }
     },
   },
